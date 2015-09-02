@@ -14,6 +14,7 @@
 		345B735A1B95D886002D6DD8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345B73591B95D886002D6DD8 /* Images.xcassets */; };
 		345B735D1B95D886002D6DD8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345B735B1B95D886002D6DD8 /* LaunchScreen.xib */; };
 		345B73691B95D886002D6DD8 /* FacebookTestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 345B73681B95D886002D6DD8 /* FacebookTestAppTests.m */; };
+		6D5AC79115170C24BFF710E1 /* libPods-FacebookTestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 721B1715DCF6258E4FD6AC80 /* libPods-FacebookTestApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		345B73621B95D886002D6DD8 /* FacebookTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		345B73671B95D886002D6DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		345B73681B95D886002D6DD8 /* FacebookTestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacebookTestAppTests.m; sourceTree = "<group>"; };
+		721B1715DCF6258E4FD6AC80 /* libPods-FacebookTestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FacebookTestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A65B5A8CC02B09FE9C8385C7 /* Pods-FacebookTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookTestApp/Pods-FacebookTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C0834892E50D21C397174928 /* Pods-FacebookTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookTestApp/Pods-FacebookTestApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D5AC79115170C24BFF710E1 /* libPods-FacebookTestApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 				345B734B1B95D886002D6DD8 /* FacebookTestApp */,
 				345B73651B95D886002D6DD8 /* FacebookTestAppTests */,
 				345B734A1B95D886002D6DD8 /* Products */,
+				FBFD1B6D99922DEA05317FA2 /* Pods */,
+				B3D4586C732ADE33E050D4A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +126,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B3D4586C732ADE33E050D4A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				721B1715DCF6258E4FD6AC80 /* libPods-FacebookTestApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBFD1B6D99922DEA05317FA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A65B5A8CC02B09FE9C8385C7 /* Pods-FacebookTestApp.debug.xcconfig */,
+				C0834892E50D21C397174928 /* Pods-FacebookTestApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 345B736C1B95D886002D6DD8 /* Build configuration list for PBXNativeTarget "FacebookTestApp" */;
 			buildPhases = (
+				3FA35A391A8D3193BC01B488 /* Check Pods Manifest.lock */,
 				345B73451B95D886002D6DD8 /* Sources */,
 				345B73461B95D886002D6DD8 /* Frameworks */,
 				345B73471B95D886002D6DD8 /* Resources */,
+				8411A0A5717B2FEBE2690E72 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FA35A391A8D3193BC01B488 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8411A0A5717B2FEBE2690E72 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FacebookTestApp/Pods-FacebookTestApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		345B73451B95D886002D6DD8 /* Sources */ = {
@@ -347,21 +406,26 @@
 		};
 		345B736D1B95D886002D6DD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A65B5A8CC02B09FE9C8385C7 /* Pods-FacebookTestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Domagoj Kulundzic (UV736G4HAA)";
 				INFOPLIST_FILE = FacebookTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a1ea006b-700f-47ec-8a83-3e05e454c1d9";
 			};
 			name = Debug;
 		};
 		345B736E1B95D886002D6DD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0834892E50D21C397174928 /* Pods-FacebookTestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FacebookTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a1ea006b-700f-47ec-8a83-3e05e454c1d9";
 			};
 			name = Release;
 		};
@@ -418,6 +482,7 @@
 				345B736E1B95D886002D6DD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		345B736F1B95D886002D6DD8 /* Build configuration list for PBXNativeTarget "FacebookTestAppTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +491,7 @@
 				345B73711B95D886002D6DD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
